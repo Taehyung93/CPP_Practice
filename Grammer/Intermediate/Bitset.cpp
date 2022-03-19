@@ -37,7 +37,7 @@ int main(){
 
 	//* binary string to decimal number
     int n = bit2.to_ulong();
-    cout << bit2 << " conver to decimal number: " << n << "\n";
+    cout << bit2 << " conver to decimal number : " << n << "\n";
 
 
 	//* decimal number to binary string
@@ -51,7 +51,7 @@ int main(){
 	else {
 		s = "0";
 	}
-	cout << num << " conver to binary number: " <<  s << "\n";
+	cout << num << " conver to binary number : " <<  s << "\n";
 	
 
 	//* bitset search
