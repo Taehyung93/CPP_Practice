@@ -69,7 +69,20 @@ int main(){
     swap(str1, str2);
     cout << "swap(str1, str2), str1 : " << str1 << endl;
     swap(str1, str2);
-    cout << "str1 + str2 : " << str1 + str2 << endl;
+    cout << "str1 + str2, str1.append(str2) : " << str1 + str2 << endl;
+    str1.append(str2,1,2);
+    cout << "str1.append(str2,0,2) : " << str1<< endl;
+    str1 = "BlockDMask";
+    str1.append(3, 'k');
+    cout << "str1.append(3, 'k'): " << str1 << endl;
+    str1 = "BlockDMask";
+    str1.erase(1, 2);
+    cout << "str1.erase(1, 2): " << str1 << endl;
+    str1 = "BlockDMask";
+    cout << "isdigit('a'): " << isdigit('a') << endl;
+    cout << "isalpha('a'): " << isalpha('a') << endl;
+    cout << "toupper('a'): " << toupper('a') << endl;
+    cout << "tolower('a'): " << tolower('a') << endl;
     cout << endl;
 
     //* String iterator method
