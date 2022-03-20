@@ -1,0 +1,2 @@
+The law I made.
+    1.  Handle the exceptions first, and then solve the general ones through loop.
