@@ -76,7 +76,7 @@ int main(){
     int intX = 123;
     decltype(intX) intY = 321;
 
-    //* bitset and list, vector is not written here.
+    //* bitset, list and vector is not written here.
 
 
     return 0;

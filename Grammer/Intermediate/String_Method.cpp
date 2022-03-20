@@ -3,6 +3,7 @@
 using namespace std;
 
 int main(){
+    //string is just list<char>, so fundament method is as same as list method, and also vector method.
     string str1 = "BlockDMask"; 
     string str2 = "BlogBlogBlogBlog"; 
 
@@ -38,6 +39,7 @@ int main(){
     str1.shrink_to_fit(); // since C++11, shrink the capacity as many as possible
     cout << "str1.shrink_to_fit() : " << str1.capacity() << endl; 
     str1.reserve(100); // allocate the memory before using. it helps reduce the cost.
+    // list is allocated memory when it has new value unlike vector. so reserve method is like vector way.
     cout << "str1.reserve(100) : " << str1.capacity() << endl; 
     str1.clear();
     cout << "str1.clear() : " << str1 << endl; // but clear() remains capacity
@@ -46,6 +48,7 @@ int main(){
 
     //* String transform method
 
+    // String has not method like push_front, pop_front
     str1 = "BlockDMask";
     cout << "==> String transform method" << endl;
     cout << "str1.c_str() : " << str1.c_str() << endl; // conver to C style string, "BlockDMask" => "BlockDMask\0"
@@ -74,7 +77,10 @@ int main(){
     cout << "str1.append(str2,0,2) : " << str1<< endl;
     str1 = "BlockDMask";
     str1.append(3, 'k');
-    cout << "str1.append(3, 'k'): " << str1 << endl;
+    cout << "str1.append(3, 'k') : " << str1 << endl;
+    str1 = "BlockDMask";
+    str1.insert(1, str2);
+    cout << "str1.insert(1, str2) : " << str1 << endl;
     str1 = "BlockDMask";
     str1.erase(1, 2);
     cout << "str1.erase(1, 2): " << str1 << endl;
@@ -87,8 +93,10 @@ int main(){
 
     //* String iterator method
     cout << "==> begin, end" << endl;
-    string::iterator iter = str1.begin();
-    for (; iter != str1.end(); ++iter)
+    string::iterator iter = str1.begin(); // initialize iterator
+    // other list is initialize like list<int>::iterator iter = a.begin();
+    
+    for (str1.begin(); iter != str1.end(); iter++)
     {
         cout << *iter << " ";
     }
