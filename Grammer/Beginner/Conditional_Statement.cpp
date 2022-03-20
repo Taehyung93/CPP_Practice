@@ -20,7 +20,7 @@ int main(){
     else 
         cout << "Neither number is positive\n";
 
-    //* Ternary operator
+    //* Ternary Operator
 
     /*
         The ternary operator is a syntactic and readability convenience, 
@@ -31,7 +31,7 @@ int main(){
 
     x > y ? cout << "x is greater than y" << endl : cout << "y is greater than x" << endl;
 
-    //* Switch
+    //* Switch Statement
     
     /*
         These switch statements are more readable than if/else statements, 
@@ -40,7 +40,7 @@ int main(){
          can be promoted to int type can be used as the condition value of the switch statement.
         In other words, C++ can only use char, short, int variables, literals, and enumerations.
     */
-    
+
     switch (x){
 
         case 10:
