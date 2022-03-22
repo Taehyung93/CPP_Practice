@@ -1,2 +1,3 @@
 The law I made.
-    1.  Handle the exceptions first, and then solve the general ones through loop.
+    1. Handle the exceptions first, and then solve the general ones through loop.
+    2. Look closely at the exceptions to the input given in the question.
