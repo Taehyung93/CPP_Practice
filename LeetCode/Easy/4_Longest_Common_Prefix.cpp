@@ -1,7 +1,5 @@
 /*
-    121 => true
-    -121 => false
-    10 => false
+    flower, float, flow => fl => true
 */
 
 class Solution {

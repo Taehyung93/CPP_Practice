@@ -53,7 +53,7 @@ int main(){
     cout << "==> String transform method" << endl;
     cout << "str1.c_str() : " << str1.c_str() << endl; // conver to C style string, "BlockDMask" => "BlockDMask\0"
     str1 = "BlockDMask";
-    cout << "str1.substr(1) : " << str1.substr(1) << endl;
+    cout << "str1.substr(1) : " << str1.substr(1) << endl; //* substr(start index, split length)
     str1 = "BlockDMask";
     cout << "str1.replace(0,2,\"KKK\") : " << str1.replace(0,2,"KKK") << endl;
     str1 = "BlockDMask";
@@ -64,7 +64,8 @@ int main(){
     //? print arr, it has garbage value but.. does not
     arr[result] = '\0'; 
     cout << "str1.copy(arr, 4, 0) : " << arr << endl;
-    cout << "str1.find(\"oc\", 0) : " << str1.find("oc", 0) << endl;
+    cout << "str1.find(\"oc\", 0) : " << str1.find("oc", 0) << endl; //* find(string, start index)
+    cout << "str1.find(\"kkk\", 0) : " << str1.find("kkk", 0) << endl; // value is -1
     str1.push_back('c'); // " " is not allowed because it is const char [2]
     cout << "str1.push_back(\'c\') : " << str1 << endl;
     str1.pop_back();
@@ -83,7 +84,7 @@ int main(){
     cout << "str1.insert(1, str2) : " << str1 << endl;
     str1 = "BlockDMask";
     str1.erase(1, 2);
-    cout << "str1.erase(1, 2): " << str1 << endl;
+    cout << "str1.erase(1, 2): " << str1 << endl; //* earase(index, length)
     str1 = "BlockDMask";
     cout << "isdigit('a'): " << isdigit('a') << endl;
     cout << "isalpha('a'): " << isalpha('a') << endl;
