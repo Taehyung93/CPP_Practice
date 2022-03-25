@@ -9,16 +9,34 @@ using namespace std;
 
 int main()
 {
-    vector<int> arr = {1,2,4,7,19};
-    vector<int> arr2 = {1,2,4,3,19};
+    string numbers = "1 2 4 7 19 -5";
+    string temp = "";
+    vector<int> arr;
+    int max = 0;
+    int min = 0;
 
-    for (int i = 0; i < arr2.size() -1; i++){
-        if(arr2[i] > arr2[i+1]){
-            cout << "false" << endl;
+    for(int i = 0; i < numbers.size(); i++){
+        if(numbers[i] == ' '){
+            arr.emplace_back(stoi(temp));
+            temp = "";
+            continue;    
+        }
+        temp += numbers[i];
+    }
+    arr.emplace_back(stoi(temp));
+
+    max = arr[0];
+    min = arr[0];
+    for (int i = 0; i < arr.size(); i++){
+        if(min > arr[i]){
+            min = arr[i];
+        }
+        if (max < arr[i]){
+            max = arr[i];
         }
     }
 
-    cout << "true" << endl;
+    
 
 
     
