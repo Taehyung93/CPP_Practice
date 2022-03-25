@@ -1,6 +1,7 @@
 /*
     Difficulty: 7 kyu
-
+    n -> 1, 4, 9, 16 ... n^2
+    d -> 0~9, d = 1, n = 10, result is 4 -> 1, 16, 81, 100
 */
 
 #include <string>
@@ -31,7 +32,7 @@ class CountDig
 {
 public:
     static int nbDig(int n, int d) {
-      int count = !d;
+      int count = !d; // !d is 0
       for (int k = 1; k <= n; ++k)
         for (int m = k * k; m; m /= 10)
           count += m % 10 == d;
