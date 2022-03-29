@@ -18,5 +18,7 @@ int main(){
         }
     }
 
+    // char 1  -48 = integer 1 
+
 
 }
