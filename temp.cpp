@@ -9,17 +9,25 @@ using namespace std;
 
 int main()
 {
-    int num = 1234;
-    string str = to_string(num);
-    int length = str.size();
-    string square = "";
+    string str = "This website is for losers LOL!";
+
+    // "Ths wbst s fr lsrs LL!"
     
-    for(int i = 0; i < length; i++){
-        int intTemp =  ((int)str[i] - 48) * ((int)str[i] - 48);
-        string temp = to_string(intTemp);
-        square += temp;
-  }
-  
+    string vowel = "aeiou";
+    vector<int> removeVector;
+    for(int i = 0; i < str.size(); i++){
+        for(int j: vowel){
+            if(j == tolower(str[i])){
+                removeVector.push_back(i);
+            }
+        }
+    }
+
+    for(int i = 0; i < removeVector.size(); i++){
+        str.erase(removeVector[i] - i,1);
+    }
+
+    cout << str << endl;
   
     
 
