@@ -9,25 +9,34 @@ using namespace std;
 
 int main()
 {
-    string str = "This website is for losers LOL!";
+    int firstInt = 42145;
 
-    // "Ths wbst s fr lsrs LL!"
-    
-    string vowel = "aeiou";
-    vector<int> removeVector;
-    for(int i = 0; i < str.size(); i++){
-        for(int j: vowel){
-            if(j == tolower(str[i])){
-                removeVector.push_back(i);
+    vector<int> vec;
+
+    while(firstInt > 0){
+        vec.push_back(firstInt % 10);
+        firstInt = firstInt / 10;
+    }
+
+    for(int i = 0 ; i < vec.size(); i++){
+        for(int j = 0; j < vec.size(); j++){
+            if(vec[i] > vec[j]){
+                int temp = vec[i];
+                vec[i] = vec[j];
+                vec[j] = temp;
             }
-        }
+        }       
     }
 
-    for(int i = 0; i < removeVector.size(); i++){
-        str.erase(removeVector[i] - i,1);
+    for(int i = 0; i < vec.size(); i++){
+        firstInt = firstInt * 10 + vec[i];
     }
 
-    cout << str << endl;
+    cout << firstInt << endl;
+
+
+
+    
   
     
 
